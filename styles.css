@@ -1,0 +1,352 @@
+* {
+  height: 100%;
+  margin: 0;
+}
+
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  margin: 0;
+}
+
+header {
+  grid-row: 1;
+  background-color: rgb(232, 58, 255);
+  height: 100%;
+}
+
+#main {
+  grid-row: 2;
+  visibility: visible;
+}
+
+#socials {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 7fr 2fr 2fr;
+}
+
+#logo {
+  grid-column: 2 / span 3;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+  width: 370px;
+  height: 370px;
+  margin-top: 20px;
+}
+
+#contract {
+  grid-column: 2 / span 3;
+  grid-row: 2;
+  justify-self: center;
+  align-self: center;
+  height: fit-content;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  font-size: 2rem;
+}
+
+.socialbuttons {
+  height: 75px;
+  width: 75px;
+  justify-self: center;
+  align-self: center;
+  border: none;
+  background-color: white;
+  padding-bottom: 2%;}
+
+#telegram {
+  grid-column: 2;
+  grid-row: 3;
+  background-image: url("https://assets.codepen.io/11700051/Telegram_logo.svg");
+}
+
+#twitter {
+  grid-column: 3;
+  grid-row: 3;
+  background-image: url("https://assets.codepen.io/11700051/X_logo_2023.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#coingecko {
+  grid-column: 4;
+  grid-row: 3;
+  background-image: url("https://assets.codepen.io/11700051/bar-chart-svgrepo-com.svg");
+  background-size: 100%;
+}
+
+footer {
+  grid-row: 3;
+  background-color: rgb(55, 243, 180);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.headfootext {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  font-size: 2.5rem;
+}
+
+#footer_buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.fbdesign {
+  font-family: 'Comic Neue', cursive, sans-serif;
+  font-size: 2rem;
+  border: 0px;
+  background-color: rgb(55, 243, 180);
+}
+
+#history {
+  grid-column: 1;
+}
+
+#historyinfo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 3fr;
+  height: fit-content;
+}
+
+#billboard {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  height: 500px;
+  width: 500px;
+  justify-self: center;
+  align-self: center;
+}
+
+#histitle {
+  grid-column: 2;
+  grid-row: 1;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  font-size: 2rem;
+}
+
+#hisdescription {
+  grid-column: 2;
+  grid-row: 2;
+  height: fit-content;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  font-size: 1.5rem;
+}
+
+#moon_mission {
+  grid-column: 2;
+}
+
+#home {
+  grid-column: 3;
+  background-image: url("https://assets.codepen.io/11700051/Home-icon.svg");
+  background-size: 50px 50px;
+  height: 50px;
+  width: 50px;
+  justify-self: center;
+  align-self: center;
+}
+
+#roadmap {
+  grid-column: 4;
+}
+
+#roadmapinfo {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+#level_one {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#level_two {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#level_three {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#level_four {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.levels {
+  height: 200px;
+  width: 400px;
+  border-width: 5px;
+  border-radius: 5px;
+  border-color: blueviolet;
+  border-style: solid;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  font-size: 1.5rem;
+}
+
+#tokenomics {
+  grid-column: 5;
+}
+
+#tokenomicsinfo {
+  font-family: 'Comic Neue', cursive, sans-serif;
+  font-size: 2rem;
+  margin: 100px;
+}
+
+#footer_buttons {
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .fbdesign {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .headfootext {
+    font-size: 2rem;
+  }
+  #contract {
+    font-size: 2rem;
+  }
+  #historyinfo {
+    grid-template-rows: 1fr .2fr 2fr;
+    grid-template-columns: 1fr;
+  }
+  #billboard {
+    grid-column: 1;
+    height: 300px;
+    width: 300px;
+    grid-row: 1;
+  }
+  #histitle {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  #hisdescription {
+    grid-row: 3;
+    grid-column: 1;
+    height: fit-content;
+  }
+  #roadmapinfo {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  #level_one {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  #level_two {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  #level_three {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  #level_four {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  .levels {
+    font-size: .8rem;
+    width: 100%;
+  }
+  html {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .fbdesign{
+    font-size: 1rem;
+  }
+  .levels {
+    font-size: .5fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .headfootext {
+    font-size: 1.5rem;
+  }
+  #contract {
+    font-size: 1.5rem;
+  }
+  #twitter {
+    margin: 0 54px;
+  }
+}
+
+@media (max-width: 600px) {
+  .headfootext {
+    font-size: 1.25rem;
+  }
+  #contract {
+    font-size: 1.25rem;
+  }
+  #logo {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 550px) {
+  .fbdesign {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .headfootext {
+    font-size: 1rem;
+  }
+  #contract {
+    font-size: 1rem;
+  }
+  .fbdesign {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .headfootext {
+    font-size: 0.9rem;
+  }
+  #contract {
+    font-size: 0.9rem;
+  }
+  .fbdesign {
+    font-size: 0.6rem;
+  }
+}
+
+
+@media (max-width: 350px) {
+  .headfootext {
+    font-size: 0.8rem;
+  }
+  #contract {
+    font-size: 0.8rem;
+  }
+  #twitter {
+    margin: 0 37px;
+  }
+}

@@ -7,69 +7,82 @@
   <title>dogebonk on sol</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Comic+Neue:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="noverflow">
   <header>
-    <div class="headfootext">THE FIRST MEMECOIN IN SPACE, NOW ON SOLANA</div>
+    <div class="headfootext" id="home_header">THE FIRST MEMECOIN IN SPACE, NOW ON SOLANA</div>
+    <div id="header_text"></div>
   </header>
   <div id="main">
     <div id="socials">
-      <img src="https://assets.codepen.io/11700051/LOGO.png" alt="" id="logo" />
+      <img src="LOGO.png" id="logo">
       <div id="contract">Fk4fiCavdntUSCfbzdGSeq9kvEfnXPhBoaNqgbgahovT</div>
       <button id="telegram" class="socialbuttons"></button>
       <button id="twitter" class="socialbuttons"></button>
       <button id="coingecko" class="socialbuttons"></button>
     </div>
     <div id="historyinfo">
-      <img src="https://assets.codepen.io/11700051/billboard.jpeg" alt="NYC Billboard" id="billboard">
+      <img src="billboard.jpeg" alt="NYC Billboard" id="billboard">
       <h2 id="histitle">IT ALL STARTED WITH A BILLBOARD...</h2>
       <div id="hisdescription">That was the catalyst that sparked a community with greater antiquity than 99 percent of crypto. Countless memes, stunts, and even a burgeoning video game, would follow. DogeBonk has, undoubtedly, touched the hearts of many a crypto enthusiast. First pumping to 250 million marketcap on BSC, and flourishing further on Ethereum, DogeBonk now arrives on Solana, ready to bonk harder than ever before!</div>
     </div>
     <div id="roadmapinfo">
       <div id="level_one" class="levels">
-        STAGE ONE <br>
-        - 2 MILLION MARKETCAP <br>
-        - VERIFIED ON TWITTER <br>
-        - 1000 TELEGRAM MEMBERS <br>
-        - 750 HOLDERS
+        <div class="level_grid">
+          <h2 id="s1_header" class="stage_header">STAGE ONE</h2>
+          <img src="512px-Corporate_Woman_Shaking_Hands_With_a_Corporate_Man.svg.png" alt="time to buy" class="rmimgs" id="rmimg1"/>
+          <div id="s1text" class="stage_text">
+            - MAKE AMMENDS WITH MY RICH (she stole all my money) EX WIFE SO SHE GIVES CASH FOR TIMMY'S HOCKEY TRIP<br>
+            - Deposit all the money and buy 40 million DogeBonk on Solana coins
+          </div>
+        </div>
       </div>
       <div id="level_two" class="levels">
-        STAGE TWO <br>
-        - DOGEBONK TRANCE EP <br>
-        - COINMARKETCAP LISTING <br>
-        - 2000 TELEGRAM MEMBERS / 1500 HOLDERS <br>
-        - SECOND TRIP TO SPACE 
+        <div class="level_grid">
+          <h2 id="s2_header" class="stage_header">STAGE TWO</h2>
+          <img src="rmimg2.jpg" alt="first time in years" class="rmimgs2" id="rmimg2"/>
+          <div id="s2_text" class="stage_text2">
+            - DOGEBONK TRANCE EP <br>
+            - GO OUTSIDE <br>
+            - EX WIFE TAKES ME TO COURT ("my money is in the DogeBonk on Solana marketing wallet, sorry")
+          </div>
+        </div>
       </div>
       <div id="level_three" class="levels">
-        STAGE THREE <br>
-        - FIRST EXCHANGE LISTING <br>
-        - BLOW MY PROFITS ON VIDEO POKER <br>
-        - DOGEBONK LOVE FANTASY QUEST RELEASED <br>
-        - REVIVE ROSS <br>
+        <div class="level_grid">
+          <h2 id="s3_header" class="stage_header">STAGE THREE</h2>
+          <img src="rmimg3.jpg" alt="WAGBI" class="rmimgs" id="rmimg3"/>
+          <div id="s3_text" class="stage_text">
+            - RICH<br>
+            - BLOW MY PROFITS ON VIDEO POKER<br>
+            - WE WENT HOME RICHER<br>
+            - REVIVE ROSS
+          </div>
+        </div>
       </div>
       <div id="level_four" class="levels">
-        STAGE FOUR <br>
-        - RICHARD TENG LISTS US ON BINANCE <br>
-        - GET A GF <br>
-        - DOGEBONK OFFICIAL CURRENCY OF FINLAND <br>
-        - 50 BILLION MARKETCAP <br>
+        <div class="level_grid">
+          <h2 id="s4_header" class="stage_header">STAGE FOUR</h2>
+          <img src="rmimg4.jpg" alt="save the puppies" class="rmimgs2" id="rmimg4"/>
+          <div id="s4_text" class="stage_text2">
+            - RICHARD TENG LISTS US ON BINANCE <br>
+            - START A CHARITY FOR SICK PUPPIES<br>
+            - DOGEBONK OFFICIAL CURRENCY OF FINLAND <br>
+            - 50 BILLION MARKETCAP
+          </div>
+        </div>
       </div>
     </div>
-    <div id="tokenomicsinfo">
-      MARKETCAP: 50 BILLION <br>
-      LIQUIDITY: BURNT (WITH THE OPTION OF ADDING LIQUIDITY FROM YOUR OWN FUNDS) <br>
-      COMMUNITY: REDPILLED <br>
-      DECIMALS: 8
     </div>
   </div>
-  <footer>
+  <footer class="overflow_footer">
     <div id="footer_buttons">
       <button id="history" class="fbdesign">HISTORY</button>
       <button id="spacevideo" class="fbdesign">SPACE VIDEO</button>
       <button id="home" class="fbdesign"></button>
       <button id="roadmap" class="fbdesign">ROADMAP</button>
-      <button id="tokenomics" class="fbdesign">TOKENOMICS</button>
+      <button id="merchandise" class="fbdesign">MERCH <div id="coming_soon">(coming soon)</div></button>
     </div>
   </footer>
   <script type="text/javascript" src="script.js"></script>

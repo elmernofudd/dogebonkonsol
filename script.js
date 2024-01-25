@@ -22,19 +22,23 @@ function coinGeckoLink () {
 
 coinGecko.addEventListener('click', coinGeckoLink)
 
+const header = document.querySelector('header')
+const headerText = document.querySelector('#header_text')
+const homeHeader = document.querySelector('#home_header')
 const history = document.querySelector('#history')
 const historyInfo = document.querySelector('#historyinfo')
 const spaceVideo = document.querySelector('#spacevideo')
 const home = document.querySelector('#home')
 const roadMap = document.querySelector('#roadmap')
 const roadMapInfo = document.querySelector('#roadmapinfo')
-const tokenomics = document.querySelector('#tokenomics')
-const tokenomicsInfo = document.querySelector('#tokenomicsinfo')
+const footer = document.querySelector('footer')
+const body = document.querySelector('body')
+
+body.style.height = '100%'
 
 socials.style.display = 'grid'
 historyInfo.style.display = 'none'
 roadMapInfo.style.display = 'none'
-tokenomicsInfo.style.display = 'none'
 
 
 function historyLink () {
@@ -44,7 +48,11 @@ function historyLink () {
     historyInfo.style.display = 'grid'
     socials.style.display = 'none'
     roadMapInfo.style.display = 'none'
-    tokenomicsInfo.style.display = 'none'
+    body.style.height = '100%'
+    headerText.innerText = 'HISTORY'
+    homeHeader.style.display = 'none'
+    headerText.style.display = 'flex'
+    footer.classList.add('overflow_footer')
   }
 }
 
@@ -63,7 +71,11 @@ function homeLink () {
     socials.style.display = 'grid'
     historyInfo.style.display = 'none'
     roadMapInfo.style.display = 'none'
-    tokenomicsInfo.style.display = 'none'
+    footer.classList.add('overflow_footer')
+    body.style.height = '100%'
+    homeHeader.innerText = 'THE FIRST MEMECOIN IN SPACE, NOW ON SOLANA'
+    homeHeader.style.display = 'flex'
+    headerText.style.display = 'none'
   }
 }
 
@@ -76,21 +88,17 @@ function roadMapLink () {
     socials.style.display = 'none'
     historyInfo.style.display = 'none'
     roadMapInfo.style.display = 'grid'
-    tokenomicsInfo.style.display = 'none'
+    footer.classList.add('overflow_footer')
+    body.style.height = 'auto'
+    headerText.innerText = 'ROADMAP'
+    homeHeader.style.display = 'none'
+    headerText.style.display = 'flex'
+
+    /* const allElements = document.querySelectorAll('*')
+    allElements.forEach(function (element) {
+      element.classList.add('overflowfooter')
+    }) */
   }
 }
 
 roadMap.addEventListener('click', roadMapLink)
-
-function tokenomicsLink () {
-  let tokenomicsDisplayStyle = window.getComputedStyle(tokenomicsInfo).display
-
-  if (tokenomicsDisplayStyle === 'none') {
-    socials.style.display = 'none'
-    historyInfo.style.display = 'none'
-    roadMapInfo.style.display = 'none'
-    tokenomicsInfo.style.display = 'grid'
-  }
-}
-
-tokenomics.addEventListener('click', tokenomicsLink)

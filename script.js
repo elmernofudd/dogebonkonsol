@@ -2,6 +2,20 @@ const socials = document.querySelector('#socials')
 const telegram = document.querySelector('#telegram')
 const twitter = document.querySelector('#twitter')
 const coinGecko = document.querySelector('#coingecko')
+const logo = document.querySelector('#bonkdog')
+
+function dogebonked () {
+  const bonkAudio = new Audio('bonk.mp3')
+  bonkAudio.play()
+  logo.style.backgroundImage = "url('dogebonk2.png')"
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(logo.style.backgroundImage = "url('dogebonk1.png')")
+    }, 100)
+  })
+}
+
+logo.addEventListener('click', dogebonked)
 
 function telegramLink () {
   console.log('hi')

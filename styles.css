@@ -5,9 +5,10 @@
 
 body {
   display: grid;
-  grid-template-rows: 77.7px 8fr 77.7px;
+  grid-template-rows: 77.7px 1fr 77.7px;
   margin: 0;
-  height: auto;
+  height: 100vh;
+  align-items: center;
 }
 
 header {
@@ -21,6 +22,7 @@ header {
 }
 
 #header_text {
+  display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
@@ -30,14 +32,13 @@ header {
 
 #main {
   grid-row: 2;
-  visibility: visible;
+  margin-top: 20px;
 }
 
-#socials {
-  height: 100%;
+#maingrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 7fr 2fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr;
 }
 
 #bonkdog {
@@ -45,12 +46,12 @@ header {
   grid-row: 1;
   justify-self: center;
   align-self: center;
-  width: 460px;
-  height: 426px;
+  width: 300px;
+  height: 300px;
   background-image: url('dogebonk1.png');
   background-repeat: no-repeat;
+  background-size: 300px 300px;
   border-width: 0;
-  box-shadow: none;
   border-color: white;
   background-color: white;
 }
@@ -58,41 +59,20 @@ header {
 #contract {
   grid-column: 2 / span 3;
   grid-row: 2;
+  height: fit-content;
   justify-self: center;
   align-self: center;
-  height: fit-content;
   font-family: 'Comic Neue', cursive, sans-serif;
   font-size: 2rem;
 }
 
-.socialbuttons {
-  height: 75px;
-  width: 75px;
+#counter {
+  grid-column: 2 / span 3;
+  grid-row: 3;
   justify-self: center;
-  align-self: center;
-  border: none;
-  background-color: white;
-  padding-bottom: 2%;}
-
-#telegram {
-  grid-column: 2;
-  grid-row: 3;
-  background-image: url("Telegram_logo.svg");
-}
-
-#twitter {
-  grid-column: 3;
-  grid-row: 3;
-  background-image: url("X_logo_2023.svg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-#coingecko {
-  grid-column: 4;
-  grid-row: 3;
-  background-image: url("CoinGecko_Logo.svg");
-  background-size: 100%;
+  font-size: 50px;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  height: fit-content;
 }
 
 footer {
@@ -103,168 +83,6 @@ footer {
   width: 100%;
   height: 100%;
   position: sticky;
-}
-
-.headfootext {
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Comic Neue', cursive, sans-serif;
-  font-size: 2.5rem;
-}
-
-#history {
-  grid-column: 1;
-}
-
-#historyinfo {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr 2fr;
-  height: 100%;
-  row-gap: 50px;
-}
-
-#billboard {
-  grid-column: 1;
-  grid-row: 1 / span 3;
-  height: 500px;
-  width: 400px;
-  justify-self: center;
-  align-self: center;
-}
-
-#histitle {
-  grid-column: 2;
-  grid-row: 2;
-  font-family: 'Comic Neue', cursive, sans-serif;
-  font-size: 2rem;
-  justify-self: center;
-  text-align: center;
-}
-
-#hisdescription {
-  grid-column: 2;
-  grid-row: 3;
-  height: fit-content;
-  font-family: 'Comic Neue', cursive, sans-serif;
-  font-size: 1.5rem;
-  padding: 0 50px;
-  text-align: center;
-  
-}
-
-#moon_mission {
-  grid-column: 2;
-}
-
-#home {
-  grid-column: 3;
-  background-image: url("Home-icon.svg");
-  background-size: 50px 50px;
-  height: 50px;
-  width: 50px;
-  justify-self: center;
-  align-self: center;
-}
-
-#roadmap {
-  grid-column: 4;
-}
-
-#roadmapinfo {
-  height: 2300px;
-  width: 100%;
-  grid-template-rows: repeat(4, 500px);
-  justify-items: center;
-  align-items: center;
-  row-gap: 50px;
-}
-
-#level_one {
-  grid-row: 1;
-  width: 100%;
-}
-
-#level_two {
-  grid-row: 2;
-  width: 100%;
-}
-
-#level_three {
-  grid-row: 3;
-  width: 100%;
-}
-
-#level_four {
-  grid-row: 4;
-  width: 100%;
-}
-
-.level_grid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 1fr 3fr;
-  width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  row-gap: 50px;
-}
-
-.stage_header {
-  grid-column: 1 / span 2;
-  grid-row: 1;
-  justify-self: center;
-  font-family: 'Bree Serif', serif;
-  font-size: 37px;
-  font-weight: bold;
-}
-
-.rmimgs {
-  grid-column: 1;
-  grid-row: 2;
-  width: 70%;
-  height: 300px;
-  justify-self: center;
-  border-radius: 10px;
-}
-
-.rmimgs2 {
-  grid-column: 2;
-  grid-row: 2;
-  width: 70%;
-  height: 300px;
-  justify-self: center;
-  border-radius: 10px;
-}
-
-.stage_text {
-  grid-column: 2;
-  grid-row: 2;
-  justify-self: center;
-  align-self: center;
-  font-family: 'Bree Serif', serif;
-  font-size: 30px;
-  width: 50%;
-}
-
-.stage_text2 {
-  grid-column: 1;
-  grid-row: 2;
-  justify-self: center;
-  align-self: center;
-  font-family: 'Bree Serif', serif;
-  font-size: 30px;
-  width: 50%;
-}
-
-#merchandise {
-  grid-column: 5;
-}
-
-.overflow_footer {
-  position: sticky;
   bottom: 0;
   z-index: 100;
   align-self: end;
@@ -272,261 +90,82 @@ footer {
 
 #footer_buttons {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
 }
 
-.fbdesign {
-  font-family: 'Comic Neue', cursive, sans-serif;
-  font-size: 2rem;
-  border: 0px;
-  background-color: rgb(55, 243, 180);
-}
-
-#merchandise {
+.socialbuttons {
+  height: 55px;
+  width: 55px;
+  justify-self: center;
   align-self: center;
+  border: none;
+  background-color: rgb(55, 243, 180);;
+  padding-bottom: 2%;
 }
 
-#coming_soon {
-  font-size: 1rem;
-  height: fit-content;
+#telegram {
+  grid-column: 1;
+  background-image: url("Telegram_logo.svg");
 }
 
-@media (max-height: 700px) {
-  #billboard {
-    height: 400px;
-  }
+#twitter {
+  grid-column: 2;
+  background-image: url("X_logo_2023.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
-@media (max-width: 1500px) {
-    /* #historyinfo {
-    grid-template-rows: 1fr .2fr 2fr;
-    grid-template-columns: 1fr;
-  } */
-  #historyinfo {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 500px 50px 500px;
-    height: 1050px;
-    row-gap: 50px;
-  }
-  
-  #billboard {
-    grid-column: 1;
-    height: 400px;
-    width: 300px;
-    grid-row: 1;
-  }
-  #histitle {
-    grid-row: 2;
-    grid-column: 1;
-  }
-  #hisdescription {
-    grid-row: 3;
-    grid-column: 1;
-    height: fit-content;
-  }
-  .levels {
-    font-size: .8rem;
-    width: 100%;
-  }
-  html {
-    margin-bottom: 0;
-  }
+#coingecko {
+  grid-column: 3;
+  background-image: url("CoinGecko_Logo.svg");
+  background-size: 100%;
 }
+
 
 @media (max-width: 1000px) {
-  #roadmapinfo {
-    height: 3250px;
-    width: 100%;
-    grid-template-rows: repeat(4, 750px);
-    justify-items: center;
-    align-items: center;
-      row-gap: 50px;
-  }
-  
-  #level_one {
-    grid-row: 1;
-    width: 100%;
-  }
-  
-  #level_two {
-    grid-row: 2;
-    width: 100%;
-  }
-  
-  #level_three {
-    grid-row: 3;
-    width: 100%;
-  }
-  
-  #level_four {
-    grid-row: 4;
-    width: 100%;
-  }
-
-  .fbdesign {
-    font-size: 1.5rem;
-  }
-
-  #coming_soon {
-    font-size: 0.75rem;
-  }
-  .level_grid {
+  #footer_buttons {
     display: grid;
-    grid-template-rows: 50px 400px 250px;
-    grid-template-columns: 1fr;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    row-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .stage_header {
-    grid-row: 1;
-    justify-self: center;
-    font-family: 'Bree Serif', serif;
-    font-size: 37px;
-    font-weight: bold;
-  }
-  
-  .rmimgs {
-    grid-column: 1;
-    grid-row: 2;
-    width: 70%;
-    height: 400px;
-    justify-self: center;
-    border-radius: 10px;
-  }
-  
-  .rmimgs2 {
-    grid-column: 1;
-    grid-row: 2;
-    width: 70vw;
-    height: 400px;
-    justify-self: center;
-    border-radius: 10px;
-  }
-  
-  .stage_text {
-    grid-row: 3;
-    grid-column: 1;
-    justify-self: center;
-    align-self: center;
-    font-family: 'Bree Serif', serif;
-    font-size: 20px;
-    width: 50vw;
-  }
-  
-  .stage_text2 {
-    grid-column: 1;
-    grid-row: 3;
-    justify-self: center;
-    align-self: center;
-    font-family: 'Bree Serif', serif;
-    font-size: 20px;
-    width: 50vw;
-  }  
-}
-
-@media (max-width: 950px) {
-  .headfootext {
-    font-size: 2rem;
-  }
-  #contract {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .fbdesign{
-    font-size: 1rem;
-  }
-  #coming_soon {
-    font-size: 0.5rem;
-  }
-  .levels {
-    font-size: .5fr;
-  }
-}
-
-@media (max-width: 750px) {
-  .headfootext {
+  #header_text {
     font-size: 1.5rem;
   }
   #contract {
     font-size: 1.5rem;
-  }
-  #twitter {
-    margin: 0 54px;
-  }
-  .rmimgs {
-    height: 300px;
-  }
-  .rmimgs2 {
-    height: 300px;
-  }
-
-  .level_grid {
-    grid-template-rows: 50px 300px 350px;
   }
 }
 
 @media (max-width: 600px) {
-  .headfootext {
-    font-size: 1.25rem;
-  }
-  #contract {
-    font-size: 1.25rem;
-  }
-  #logo {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-@media (max-width: 550px) {
-  .fbdesign {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 470px) {
-  .headfootext {
-    font-size: 1rem;
-  }
   #contract {
     font-size: 1rem;
-  }
-  .fbdesign {
-    font-size: 0.7rem;
-  }
-  #hisdescription {
-    font-size: 1.25rem;
   }
 }
 
 @media (max-width: 400px) {
-  .headfootext {
-    font-size: 0.9rem;
-  }
   #contract {
-    font-size: 0.9rem;
-  }
-  .fbdesign {
-    font-size: 0.6rem;
+    font-size: 0.8rem
   }
 }
 
+@media (max-height: 777px) {
+  #maingrid {
+    grid-template-rows: 60% 20% 20%;
+  }
+}
 
-@media (max-width: 350px) {
-  .headfootext {
-    font-size: 0.8rem;
+@media (max-height: 650px) {
+  #bonkdog {
+    width: 250px;
+    height: 250px;
+    background-size: 250px 250px;
   }
-  #contract {
-    font-size: 0.8rem;
-  }
-  #twitter {
-    margin: 0 37px;
+}
+
+@media (max-height: 570px) {
+  #bonkdog {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
   }
 }

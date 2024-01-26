@@ -1,21 +1,33 @@
-const socials = document.querySelector('#socials')
 const telegram = document.querySelector('#telegram')
 const twitter = document.querySelector('#twitter')
 const coinGecko = document.querySelector('#coingecko')
 const logo = document.querySelector('#bonkdog')
+const bonkAudio = new Audio('bonk.mp3')
 
-function dogebonked () {
-  const bonkAudio = new Audio('bonk.mp3')
-  bonkAudio.play()
-  logo.style.backgroundImage = "url('dogebonk2.png')"
-  return new Promise((resolve, reject) => {
+async function dogebonked () {
+  return new Promise((resolve) => {
+    bonkAudio.currentTime = 0
+    bonkAudio.play().catch(error => {
+      console.error('Error playing audio:', error)
+    })
+
+    logo.style.backgroundImage = "url('dogebonk2.png')"
+
+    let counter = document.querySelector('#counter')
+    let currentValue = parseInt(counter.innerText)
+    counter.innerText = (currentValue + 1).toString()
+    console.log(counter.innerText)
+
     setTimeout(() => {
-      resolve(logo.style.backgroundImage = "url('dogebonk1.png')")
+      logo.style.backgroundImage = "url('dogebonk1.png')"
+      resolve()
     }, 100)
   })
 }
 
-logo.addEventListener('click', dogebonked)
+logo.addEventListener('click', async () => {
+  await dogebonked()
+})
 
 function telegramLink () {
   console.log('hi')
@@ -35,84 +47,3 @@ function coinGeckoLink () {
 }
 
 coinGecko.addEventListener('click', coinGeckoLink)
-
-const header = document.querySelector('header')
-const headerText = document.querySelector('#header_text')
-const homeHeader = document.querySelector('#home_header')
-const history = document.querySelector('#history')
-const historyInfo = document.querySelector('#historyinfo')
-const spaceVideo = document.querySelector('#spacevideo')
-const home = document.querySelector('#home')
-const roadMap = document.querySelector('#roadmap')
-const roadMapInfo = document.querySelector('#roadmapinfo')
-const footer = document.querySelector('footer')
-const body = document.querySelector('body')
-
-body.style.height = '100%'
-
-socials.style.display = 'grid'
-historyInfo.style.display = 'none'
-roadMapInfo.style.display = 'none'
-
-
-function historyLink () {
-  let historyDisplayStyle = window.getComputedStyle(historyInfo).display
-
-  if (historyDisplayStyle === 'none') {
-    historyInfo.style.display = 'grid'
-    socials.style.display = 'none'
-    roadMapInfo.style.display = 'none'
-    body.style.height = '100%'
-    headerText.innerText = 'HISTORY'
-    homeHeader.style.display = 'none'
-    headerText.style.display = 'flex'
-    footer.classList.add('overflow_footer')
-  }
-}
-
-history.addEventListener('click', historyLink)
-
-function videoLink () {
-  window.open('https://www.youtube.com/watch?v=UWCbAZlcdm0')
-}
-
-spaceVideo.addEventListener('click', videoLink)
-
-function homeLink () {
-  let socialsDisplayStyle = window.getComputedStyle(socials).display
-
-  if (socialsDisplayStyle === 'none') {
-    socials.style.display = 'grid'
-    historyInfo.style.display = 'none'
-    roadMapInfo.style.display = 'none'
-    footer.classList.add('overflow_footer')
-    body.style.height = '100%'
-    homeHeader.innerText = 'THE FIRST MEMECOIN IN SPACE, NOW ON SOLANA'
-    homeHeader.style.display = 'flex'
-    headerText.style.display = 'none'
-  }
-}
-
-home.addEventListener('click', homeLink)
-
-function roadMapLink () {
-  let roadMapDisplayStyle = window.getComputedStyle(roadMapInfo).display
-
-  if (roadMapDisplayStyle === 'none') {
-    socials.style.display = 'none'
-    historyInfo.style.display = 'none'
-    roadMapInfo.style.display = 'grid'
-    footer.classList.add('overflow_footer')
-    body.style.height = 'auto'
-    headerText.innerText = 'ROADMAP'
-    homeHeader.style.display = 'none'
-    headerText.style.display = 'flex'
-
-    /* const allElements = document.querySelectorAll('*')
-    allElements.forEach(function (element) {
-      element.classList.add('overflowfooter')
-    }) */
-  }
-}
-
-roadMap.addEventListener('click', roadMapLink)
